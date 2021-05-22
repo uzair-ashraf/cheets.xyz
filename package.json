@@ -1,0 +1,8 @@
+{
+  "name": "cheets.xyz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:uzair-ashraf/cheets.xyz.git",
+  "author": "Uzair Ashraf <uzinatorcl@gmail.com>",
+  "license": "MIT"
+}
