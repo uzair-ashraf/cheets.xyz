@@ -8,12 +8,27 @@ html {
 * {
   box-sizing: border-box;
 }
+
+img {
+  display: block;
+}
+
 body {
   background-image: url("./images/bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  color: #595959;
+  transition-duration: 500ms;
+  text-align: center;
+}
+
+body * {
+}
+
+.hidden {
+  display: none;
 }
 
 .opening-container {
@@ -23,12 +38,12 @@ body {
   transition-duration: 500ms;
   justify-content: center;
 }
+.opening-container * {
+  transition-duration: 500ms;
+}
 
 .opening {
-  transition-duration: 500ms;
   border: 4px solid #595959;
-  color: #595959;
-  text-align: center;
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -37,9 +52,58 @@ body {
 }
 
 .running-cheetah {
-  transition-duration: 500ms;
   display: block;
   width: 0;
   opacity: 0;
   margin: 0 auto;
+}
+
+main {
+  display: flex;
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  transition-duration: 500ms;
+  align-items: center;
+}
+
+main * {
+  transition-duration: 500ms;
+}
+
+main .cheets {
+  opacity: 0;
+  max-width: 50%;
+  max-height: 100vh;
+}
+
+main > div > h1 {
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+main > div {
+  max-width: 50%;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+main > div > img.discord-icon {
+  opacity: 0;
+  max-width: 320px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 32px;
+  }
 }
