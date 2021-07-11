@@ -89,7 +89,7 @@ main > div {
   margin: 0 auto;
 }
 
-main > div > img.discord-icon {
+main > div > a > img.twitter-icon {
   opacity: 0;
   max-width: 320px;
   width: 90%;

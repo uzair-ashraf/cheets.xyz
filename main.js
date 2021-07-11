@@ -13,9 +13,12 @@
     mainH1: document.querySelector("main > div > h1"),
     mainH2: document.querySelector("main > div > h2"),
     mainH3: document.querySelector("main > div > h3"),
-    mainDiscordIcon: document.querySelector("main > div > img.discord-icon"),
+    mainDiscordIcon: document.querySelector("main > div > a > img.twitter-icon"),
   };
   document.body.addEventListener("click", function (e) {
+    if (e.target.classList.contains('twitter-icon')) {
+      return
+    }
     e.preventDefault();
     party.confetti(e);
   });
@@ -66,7 +69,7 @@ async function mainView($, utils) {
   }
   await utils.delay(300);
 
-  const heading3 = "Find me on discord!";
+  const heading3 = "Follow me on Twitter!";
   for (let i = 0; i < heading3.length; i++) {
     await utils.delay(75);
     mainH3.textContent += heading3[i];
